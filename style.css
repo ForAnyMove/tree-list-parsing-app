@@ -1,0 +1,112 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: url('https://pibig.info/uploads/posts/2022-11/1669788415_7-pibig-info-p-klassicheskii-fon-dlya-prezentatsii-instag-7.jpg') fixed no-repeat;
+  background-size: cover;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.2em;
+}
+
+.container{
+  width: 80vw;
+  margin: 10vw auto 0;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.caret {
+  cursor: pointer;
+}
+
+.caret::before {
+  content: "→";
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.caret-down::before {
+  transform: rotate(90deg);
+}
+
+.nested {
+  display: none;
+  padding-left: 20px;
+}
+
+.active {
+  display: block;
+}
+
+/* Search panel */
+.input-container {
+  width: 220px;
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  right: 10px;
+  top: calc(50% + 5px);
+  transform: translateY(calc(-50% - 5px));
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  transition: .2s linear;
+  border: 2.5px solid black;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  outline: none;
+  border: 0.5px solid black;
+  box-shadow: -5px -5px 0px black;
+}
+
+.input-container:hover > .icon {
+  animation: anim 1s linear infinite;
+}
+
+@keyframes anim {
+  0%,
+  100% {
+    transform: translateY(calc(-50% - 5px)) scale(1);
+  }
+
+  50% {
+    transform: translateY(calc(-50% - 5px)) scale(1.1);
+  }
+}
+
+/* Search result styling */
+
+.result-container{
+  position: fixed;
+  min-width: 10vw;
+  padding: 20px;
+  top: 10vw;
+  right: 20vw;
+  background-color: #ffffff35;
+}
+
+.close-btn{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+.hidden{
+  display: none;
+}
